@@ -1,0 +1,206 @@
+/* -------------------- CSS BY ELLIOTT -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Jaro:opsz@6..72&family=Sixtyfour+Convergence&display=swap');
+/*-------------------- CSS REST ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --purple: #9055A2;
+    --light-purple: #DEC4EE;
+    --yellow: #FFF5AC;
+    --forest-green:#002A22; 
+    --green: #558564; 
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+body {
+    font-family: 'Inter', serif;
+    margin: 0 auto;
+    min-width: 450px;
+    width: 100%;
+    background-color: #9055A2;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--forest-green);
+}
+h1 {
+    padding-top: 15px;
+    color: white;
+    font-family: Calistoga;
+    font-size: 3em;
+    text-align: center;
+}
+header p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--yellow);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+#banner img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+#content {
+    position: relative;
+    top: -25px;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+img {
+    width: 30%;
+}
+nav h2 {
+    visibility: hidden;
+    font-size: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav li {
+    display: block;
+    width: 400px;
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    font-family: Calistoga;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--forest-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #558564;
+}
+h2 {
+    font-size: 2.5em;
+    color: #002A22;
+    font-weight: bold;
+}
+#mardi-gras {
+    background-color: var(--light-purple);
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title title"
+        "text image";
+    gap: 20px;
+}
+#jimmy-buffett {
+    background-color: var(--yellow);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title title"
+        "image text";
+    gap: 20px;
+}
+#history {
+    background-color: var(--light-purple);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title title"
+        "text image";
+    gap: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#history h2, #jimmy-buffett h2, #mardi-gras h2 {
+    grid-area: title;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#mardi-gras img, #jimmy-buffett img, #history img {
+    border-radius: 25px;
+    grid-area: image;
+    width: auto;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
+#mardi-gras p, #jimmy-buffett p, #history p {
+    grid-area: text;
+    text-align: left;
+    font-size: 1.75em;
+    line-height: 1.8; 
+    color: #002A22;
+    border-radius: 25px;
+    max-width: 90%; 
+    margin: 0 auto; 
+    padding: 10px 20px; 
+}
+footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+footer small {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
