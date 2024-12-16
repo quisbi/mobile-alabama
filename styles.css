@@ -43,6 +43,7 @@ footer, header, hgroup, menu, nav, section {
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body {
     font-family: 'Inter', serif;
+    font-weight: bold;
     margin: 0 auto;
     min-width: 450px;
     width: 100%;
@@ -131,6 +132,7 @@ h2 {
     font-size: 2.5em;
     color: #002A22;
     font-weight: bold;
+    font-family: Calistoga;
 }
 #mardi-gras {
     background-color: var(--light-purple);
