@@ -71,15 +71,15 @@ header p {
 }
 div img {
     display: block;
-    position: relative;
+    position:relative;
+    top: -275px;
     z-index: 1;
     width: 100%;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 #content {
     position: relative;
-    top: -25px;
     width: 95%;
     display: block;
     margin: 0 auto;
@@ -94,27 +94,30 @@ nav h2 {
 nav {
     display: flex;
     justify-content: center;
+    position: relative;
     gap: 20px;
     padding: 30px;
+    top: 200px;
+    right: 10px;
 }
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
 nav li {
     display: block;
-    width: 400px;
+    width: 300px;
     text-align: center;
 }
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 2em;
+    font-size: 1.25em;
     font-family: Calistoga;
     margin: 0;
     padding: 15px;
@@ -141,33 +144,35 @@ h2 {
     padding-right: 30px;
     padding-bottom: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "title title"
-        "text image";
+        "title"
+        "image"
+        "text";
     gap: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 #jimmy-buffett {
     background-color: var(--yellow);
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "title title"
-        "image text";
+        "title"
+        "image"
+        "text";
     gap: 20px;
 }
 #history {
     background-color: var(--light-purple);
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "title title"
-        "text image";
+        "title"
+        "image"
+        "text";
     gap: 20px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -188,7 +193,7 @@ h2 {
 #mardi-gras p, #jimmy-buffett p, #history p {
     grid-area: text;
     text-align: left;
-    font-size: 1.75em;
+    font-size: 1.5em;
     line-height: 1.8; 
     color: #002A22;
     border-radius: 25px;
@@ -205,4 +210,112 @@ footer small {
     font-size: 1.5em;
     color: white;
     font-weight: bold;
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width:620px) {
+    nav {
+        top: 0;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    nav li:first-child, nav li:last-child { 
+        width: 175px;
+    }
+    
+    nav li:nth-child(2) { 
+        width: 190px;
+    }
+    div img {
+        position: relative;
+        z-index: 1;
+        top: 0px;
+    }
+    #content {
+        top: -25px;
+    }
+}
+/*-------------------- MEDIA QUERY (large) --------------------------------*/
+@media screen and (min-width:950px) {
+    nav li:first-child, nav li:last-child, nav li:nth-child(2) {
+        width: 290px;
+    }
+    nav a {
+        font-size: 1.5em;
+    }
+    #mardi-gras {
+        background-color: var(--light-purple);
+        padding-top: 45px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title title"
+            "text image";
+        gap: 20px;
+    }
+    #jimmy-buffett {
+        background-color: var(--yellow);
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title title"
+            "image text";
+        gap: 20px;
+    }
+    #history {
+        background-color: var(--light-purple);
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title title"
+            "text image";
+        gap: 20px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    #mardi-gras img, #jimmy-buffett img, #history img {
+        max-width: 100%;
+    }
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width:1280px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 30px;
+    }
+    h1 {
+        padding: 0;
+        font-size: 3.5em;
+    }
+    header p {
+        padding: 0;
+        font-size: 1.75em;
+    }
+    nav ul {
+        gap: 75px;
+    }
+    nav li:first-child, nav li:last-child, nav li:nth-child(2) {
+        width: 350px;
+    }
+    nav a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
